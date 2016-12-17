@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f58-16-CGI">
+                                <rect key="frame" x="202" y="617" width="157" height="30"/>
+                                <color key="backgroundColor" red="0.24965766610000001" green="0.76064964710000005" blue="0.95048674740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get image"/>
+                                <connections>
+                                    <action selector="getImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qjq-2E-F3U"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-nH-Zwf">
+                                <rect key="frame" x="16" y="373" width="343" height="236"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4a3-du-aOn">
+                                <rect key="frame" x="16" y="20" width="343" height="345"/>
+                                <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.81960784310000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4a3-du-aOn" secondAttribute="height" constant="-2" id="KRj-7O-Dcs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vd-Xv-odd">
+                                <rect key="frame" x="16" y="617" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.64889860249999998" green="1" blue="0.77031069640000005" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get text"/>
+                                <connections>
+                                    <action selector="getText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BpG-BM-rtq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="f58-16-CGI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="29k-Hk-Qry"/>
+                            <constraint firstItem="2vd-Xv-odd" firstAttribute="width" secondItem="f58-16-CGI" secondAttribute="width" constant="8" id="4F6-sI-vhd"/>
+                            <constraint firstItem="fpa-nH-Zwf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5LX-gy-6Ev"/>
+                            <constraint firstItem="2vd-Xv-odd" firstAttribute="top" secondItem="fpa-nH-Zwf" secondAttribute="bottom" constant="8" id="F3F-9D-VIj"/>
+                            <constraint firstItem="fpa-nH-Zwf" firstAttribute="top" secondItem="4a3-du-aOn" secondAttribute="bottom" constant="8" id="Pu7-Ya-0aE"/>
+                            <constraint firstItem="f58-16-CGI" firstAttribute="leading" secondItem="2vd-Xv-odd" secondAttribute="trailing" constant="21" id="T11-1h-2hp"/>
+                            <constraint firstItem="4a3-du-aOn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ta6-WQ-PlC"/>
+                            <constraint firstItem="4a3-du-aOn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Uqn-Qd-LAM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2vd-Xv-odd" secondAttribute="bottom" constant="20" id="dwh-HX-Idg"/>
+                            <constraint firstItem="f58-16-CGI" firstAttribute="top" secondItem="fpa-nH-Zwf" secondAttribute="bottom" constant="8" id="fRs-vj-5NM"/>
+                            <constraint firstItem="2vd-Xv-odd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k8N-eJ-lLf"/>
+                            <constraint firstItem="fpa-nH-Zwf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lNU-28-YJN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f58-16-CGI" secondAttribute="bottom" constant="20" id="vUo-xh-ciO"/>
+                            <constraint firstItem="4a3-du-aOn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yXU-X5-sbQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="4a3-du-aOn" id="14W-F6-kR3"/>
+                        <outlet property="textView" destination="fpa-nH-Zwf" id="Ulk-yb-HQv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+</document>
